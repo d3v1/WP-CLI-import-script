@@ -11,4 +11,4 @@ printf "\n\n ---- Replacing strings in database ----\n\n"
 wp search-replace 'http://example.com' 'https://example.com'
 rm /tmp/the-old-wp-database.sql
 printf "\n\n--- Synchronising the uploads only --- \n\n"
-scp -r root@123.456.789.111:/var/www/example.com/wp-content/uploads /home/forge/example.com/wp-content/
+rsync -r root@123.456.789.111:/var/www/example.com/wp-content/uploads /home/forge/example.com/wp-content/
